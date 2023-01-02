@@ -11,7 +11,7 @@
     "sunnysideup/sswebpack_engine_only": "dev-master"
   },
   "extra": {
-    "installer-name": "info",
+    "installer-name": "theme-info-only",
     "expose": [
       "dist"
     ]
