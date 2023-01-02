@@ -1,0 +1,22 @@
+
+html {
+    margin: 0;
+    padding: 0;
+    font-family: $base_font;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $base_font;
+}
+main {
+    overflow-x: hidden;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+    min-height: 80vh;
+
+}
+footer#footer {
+    padding: 2rem;
+}
