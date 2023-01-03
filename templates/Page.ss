@@ -8,10 +8,10 @@
     <% include WebpackCSSLinks %>
 </head>
 
-<body class="$ClassName" id="top">
+<body class="$ClassName.ShortName" id="top">
 
     <% include Header %>
-
+    Hello
     <main id="main">
         <div class="typography">
             $Layout
