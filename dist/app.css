@@ -170,6 +170,13 @@ footer#footer {
   margin-bottom: 1rem;
   padding-left: 0;
 }
+.typography ul li h3, .typography ul li h4, .typography ul li h5, .typography ul li h6, .typography ol li h3, .typography ol li h4, .typography ol li h5, .typography ol li h6 {
+  margin: 0;
+}
+.typography ul li h3 + ul, .typography ul li h4 + ul, .typography ul li h5 + ul, .typography ul li h6 + ul, .typography ol li h3 + ul, .typography ol li h4 + ul, .typography ol li h5 + ul, .typography ol li h6 + ul {
+  margin-top: 0;
+  padding-top: 0;
+}
 .typography ul li ul, .typography ul li ol, .typography ol li ul, .typography ol li ol {
   padding-top: 1.7rem;
   margin-left: 0;
