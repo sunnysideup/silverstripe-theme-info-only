@@ -276,7 +276,7 @@ imageWrapper();
 /******/ 		        // webpack-livereload-plugin
 /******/ 		        (function() {
 /******/ 		          if (typeof window === "undefined") { return };
-/******/ 		          var id = "webpack-livereload-plugin-script-7b6474bb270b0cfb";
+/******/ 		          var id = "webpack-livereload-plugin-script-dd60c6c3a5baf394";
 /******/ 		          if (document.getElementById(id)) { return; }
 /******/ 		          var el = document.createElement("script");
 /******/ 		          el.id = id;
