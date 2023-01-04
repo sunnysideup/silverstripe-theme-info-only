@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: $base_font;
+    background-color: $colour_overcast_sunny_side_up;
 }
 main {
     overflow-x: hidden;
@@ -15,6 +16,9 @@ main {
     position: relative;
     z-index: 2;
     min-height: 80vh;
+    max-width: 770px;
+    margin: 2rem auto;
+    background-color: #fff!important;
 
 }
 footer#footer {

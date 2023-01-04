@@ -4,11 +4,11 @@
 <html lang="$ContentLocale">
 <head>
     $ExtendedMetaTags
-    <%-- <% require themedCss('dist/main') %> --%>
+    <% require themedCss('dist/app.css') %>
     <% include WebpackCSSLinks %>
 </head>
 
-<body class="$ClassName.ShortName" id="top">
+<body class="$ClassName.ShortName ffrff" id="top">
 
     <% include Header %>
     Hello
@@ -31,7 +31,7 @@
     <% include WebpackCSSLinks %>
 </head>
 
-<body class="$ClassName" id="top">
+<body class="$ClassName.ShortName" id="top">
 
     <% include Header %>
 
@@ -42,7 +42,7 @@
     </main>
 
     <% include Footer %>
-    <% include WebpackJSLinks %>
+    <%-- <% include WebpackJSLinks %> --%>
 <% end_if %>
 
 
