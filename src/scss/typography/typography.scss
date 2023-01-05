@@ -19,6 +19,8 @@
         font-family: $base_font_headers;
         font-weight: 500;
         line-height: 1.5;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
         strong {
             font-weight: 500;
         }
@@ -29,7 +31,7 @@
             border-top-color: transparent!important;
         }
     }
-    h1, h2 {
+    h1, h2, h3 {
         margin-top: 1.5em;
         text-transform: uppercase;
         color: $colour_blue_cobalter;
@@ -46,6 +48,23 @@
         font-size: 3rem;
         line-height: 1.3;
     }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+    h4 {
+        font-size: 2rem;
+    }
+    h5 {
+        font-size: 1.7rem;
+    }
+    h6 {
+        font-size: 1.5rem;
+        font-style: italic;
+        font-weight: 200;
+        font-family: $base_font_condensed;
+    }
+
 
     ul, ol {
         font-size: 2rem;
@@ -76,25 +95,6 @@
                 }
             }
         }
-    }
-    h3 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
-    h4 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
-    h5 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
-    h6 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-        font-style: italic;
-        font-weight: 200;
-        font-family: $base_font_condensed;
     }
     .image-container {
         img {
