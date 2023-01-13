@@ -4,7 +4,6 @@
 <html lang="$ContentLocale">
 <head>
     $ExtendedMetaTags
-    <% require themedCss('dist/app.css') %>
     <% include WebpackCSSLinks %>
 </head>
 
@@ -27,7 +26,6 @@
 <html lang="$ContentLocale">
 <head>
     $ExtendedMetaTags
-    <% require themedCss('dist/app.css') %>
     <% include WebpackCSSLinks %>
 </head>
 
