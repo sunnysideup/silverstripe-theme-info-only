@@ -44,7 +44,6 @@
     <% include Footer %>
 
     <% include WebpackJSLinks %>
-    <%-- <% include WebpackJSLinks %> --%>
 <% end_if %>
 
 
