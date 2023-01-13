@@ -10,7 +10,7 @@
 <body class="$ClassName.ShortName ffrff" id="top">
 
     <% include Header %>
-    Hello
+
     <main id="main">
         <div class="typography">
             $Layout
@@ -32,7 +32,7 @@
 <body class="$ClassName.ShortName ffrff" id="top">
 
     <% include Header %>
-    Hello
+
     <main id="main">
         <div class="typography">
             $Layout
@@ -40,9 +40,10 @@
     </main>
 
     <% include Footer %>
-    <% include WebpackJSLinks %>
 
     <% include Footer %>
+
+    <% include WebpackJSLinks %>
     <%-- <% include WebpackJSLinks %> --%>
 <% end_if %>
 
