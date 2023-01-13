@@ -5,7 +5,8 @@
   "keywords": ["silverstripe", "theme"],
   "license": "BSD-3-Clause",
   "require": {
-    "sunnysideup/webpack_requirements_backend": "dev-master"
+    "sunnysideup/webpack_requirements_backend": "dev-master",
+    "composer require sunnysideup/simple-template-caching": "dev-master"
   },
   "require-dev": {
     "sunnysideup/sswebpack_engine_only": "dev-master"

@@ -24,22 +24,25 @@
 <% end_cached %><% else %>
 
 <!-- uncached -->
-
 <html lang="$ContentLocale">
 <head>
     $ExtendedMetaTags
+    <% require themedCss('dist/app.css') %>
     <% include WebpackCSSLinks %>
 </head>
 
-<body class="$ClassName.ShortName" id="top">
+<body class="$ClassName.ShortName ffrff" id="top">
 
     <% include Header %>
-
+    Hello
     <main id="main">
         <div class="typography">
             $Layout
         </div>
     </main>
+
+    <% include Footer %>
+    <% include WebpackJSLinks %>
 
     <% include Footer %>
     <%-- <% include WebpackJSLinks %> --%>
