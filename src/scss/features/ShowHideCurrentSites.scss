@@ -1,0 +1,20 @@
+#ShowHideCurrent {
+    border-bottom: 1px solid #ffffff77;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    &.show-current {
+        #ShowHideCurrentShowCurrent {
+            display: none;
+        }
+        #ShowHideCurrentShowAll {
+            display: block;
+        }
+    }
+    #ShowHideCurrentShowAll {
+        display: none;
+    }
+    #ShowHideCurrentShowCurrent {
+        display: block;
+    }
+}
+
