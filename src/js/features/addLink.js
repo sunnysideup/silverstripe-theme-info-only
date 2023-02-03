@@ -92,7 +92,16 @@ function updateSiteDOM(id, DOMtext) {
         }
     }
 
-    site.innerHTML=DOMtext
+    //site.innerHTML=DOMtext
+    const diff = getSiteDOMDiff();
+    //get the changes, iterate through and apply additions
+    //this way event handlers etc shouldn't be overwritten
+    //doesn't account for intentional deletions?
+}
+
+function getSiteDOMDiff() {
+    //https://gist.github.com/joshblack/81b61f33fdb6233c50eb maybe this?
+    return;
 }
 
 //CSS for button and input
