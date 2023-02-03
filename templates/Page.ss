@@ -7,7 +7,7 @@
     <% include WebpackCSSLinks %>
 </head>
 
-<body class="$ClassName.ShortName ffrff" id="top">
+<body class="$ClassName.ShortName ffrff" id="top" data-link="$Link">
 
     <% include Header %>
 
@@ -29,7 +29,7 @@
     <% include WebpackCSSLinks %>
 </head>
 
-<body class="$ClassName.ShortName ffrff" id="top">
+<body class="$ClassName.ShortName ffrff" id="top" data-link="$Link">
 
     <% include Header %>
 

@@ -3,10 +3,12 @@ const bodyClass = {
   bodyObject: null,
 
   init: function () {
+    bodyClass.bodyObject = document.getElementsByTagName('body')[0]
     this.addBasicBodyClassListeners()
   },
 
-  addBasicBodyClassListeners: function () {
+  addBasicBodyClassListeners: function () 
+  {
     document.addEventListener(
       'DOMContentLoaded',
       function (event) {
@@ -17,7 +19,6 @@ const bodyClass = {
         } else {
           bodyClass.bodyObject.classList.add('no-touch')
         }
-        bodyClass.addRocketMode()
       }
     )
     window.addEventListener(
