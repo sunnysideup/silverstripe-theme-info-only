@@ -15,7 +15,7 @@ for (var i = 0; i < sites.length; i++) {
     site.children[0].children[0].addEventListener(
         'click',
         function() {addLinkClick(site);}
-        )
+    )
 
     //add styling classes
     site.children[0].children[0].classList.add('AddLinkButton');
