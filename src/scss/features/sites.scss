@@ -1,129 +1,138 @@
-Body.SitesPage {
-    .typography .site * {
-        font-size: 15px;
-    }
-
-    .error {
-        color: #6e0101;
-        text-decoration: line-through;
-    }
-
-    [data-field] {
-        border-top: 1px solid #eee;
-        margin-top: 2rem;
-    }
-    .missing-links, .active-links {
-        margin-top: 2rem;
-    }
-    .missing-links [data-field] {
-        border-top: none;
-        margin-top: 0;
-    }
-
-    .missing-links ul {
-        column-count: 3;
-    }
-    .missing-links ul li {
-        font-size: 12px!important;
-    }
-
-    .site {
-        border-top: 1px solid #2d57ff;
-    }
-
-
-    .link-holder {
-        position: relative;
-        padding-bottom: 1rem;
-        padding-bottom: 0!important;
-        margin-bottom: 0!important;
-        padding-top: 1rem;
-    }
-    .link-holder > strong {
-        float: left;
-        display: block;
-    }
-    .link-items {
-        padding: 0!important;
-        margin: 0!important;
-        margin-left: 242px!important;
-    }
-    .link-items li {
-        list-style: none;
-    }
-
-    .project-details {
-        margin: 0!important;
-        padding: 0!important;
-    }
-
-    #fieldsToc:hover, #toc:hover {
-        width: 200px;
-    }
-    #fieldsToc, #toc {
-        background-color: #a59e8c;
-        padding: 20px;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        width: 200px;
-        height: 100%;
-        overflow-y: auto;
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 0 2.6px;
-    }
-    #toc li a.current, #fieldsToc li a.current {
-        color: white;
-        font-weight: bold;
-    }
-    #toc li, #fieldsToc li {
-        font-size: 13px;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    #toc li a, #fieldsToc li a {
-        padding-top: 3px;
-        padding-bottom: 3px;
-        display: block;
-    }
-    #toc li a:hover, #fieldsToc li a:hover {
-        text-decoration: underline;
-    }
-    #toc li a.current:hover, #fieldsToc li a.current:hover {
-        color: #fff;
-    }
-    #fieldsToc {
-        box-shadow: rgba(0, 0, 0, 0.15) -1.95px 0px 2.6px;
-        /* border-left: 1px solid #222; */
-        background-color: #8ac926;
-    }
-    #toc {
-        /* border-right: 1px solid #222; */
-        right: auto;
-        left: 0;
-        background-color: #ffbe0b;
-    }
-
-    @media only screen and (max-width: 1330px)  {
-        #fieldsToc, #toc {
-            z-index: 99;
-            width: 0px!important;
-            padding: 30px!important;
-            height: 0px!important;
-            border-radius: 30px;
+    Body.SitesPage {
+        .screenshot {
+            display: block;
+            img {
+                border: 1px solid #aaa;
+                margin: 1rem 1rem 1rem 0;
+                display: block;
+                max-width: 400px;
+            }
         }
-        #fieldsToc ul, #toc ul  {
-            display: none;
+        .typography .site * {
+            font-size: 15px;
         }
-        #fieldsToc:hover, #toc:hover {
-            width: 50vw!important;
-            height: 100%!important;
-            border-radius: 0;
+
+        .error {
+            color: #6e0101;
+            text-decoration: line-through;
         }
-        #fieldsToc:hover ul, #toc:hover ul {
+
+        [data-field] {
+            border-top: 1px solid #eee;
+            margin-top: 2rem;
+        }
+        .missing-links, .active-links {
+            margin-top: 2rem;
+        }
+        .missing-links [data-field] {
+            border-top: none;
+            margin-top: 0;
+        }
+
+        .missing-links ul {
+            column-count: 3;
+        }
+        .missing-links ul li {
+            font-size: 12px!important;
+        }
+
+        .site {
+            border-top: 1px solid #2d57ff;
+        }
+
+
+        .link-holder {
+            position: relative;
+            padding-bottom: 1rem;
+            padding-bottom: 0!important;
+            margin-bottom: 0!important;
+            padding-top: 1rem;
+        }
+        .link-holder > strong {
+            float: left;
             display: block;
         }
+        .link-items {
+            padding: 0!important;
+            margin: 0!important;
+            margin-left: 242px!important;
+        }
+        .link-items li {
+            list-style: none;
+        }
 
+        .project-details {
+            margin: 0!important;
+            padding: 0!important;
+        }
+
+        #fieldsToc:hover, #toc:hover {
+            width: 200px;
+        }
+        #fieldsToc, #toc {
+            background-color: #a59e8c;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 200px;
+            height: 100%;
+            overflow-y: auto;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 0 2.6px;
+        }
+        #toc li a.current, #fieldsToc li a.current {
+            color: white;
+            font-weight: bold;
+        }
+        #toc li, #fieldsToc li {
+            font-size: 13px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        #toc li a, #fieldsToc li a {
+            padding-top: 3px;
+            padding-bottom: 3px;
+            display: block;
+        }
+        #toc li a:hover, #fieldsToc li a:hover {
+            text-decoration: underline;
+        }
+        #toc li a.current:hover, #fieldsToc li a.current:hover {
+            color: #fff;
+        }
+        #fieldsToc {
+            box-shadow: rgba(0, 0, 0, 0.15) -1.95px 0px 2.6px;
+            /* border-left: 1px solid #222; */
+            background-color: #8ac926;
+        }
+        #toc {
+            /* border-right: 1px solid #222; */
+            right: auto;
+            left: 0;
+            background-color: #ffbe0b;
+        }
+
+        @media only screen and (max-width: 1330px)  {
+            #fieldsToc, #toc {
+                z-index: 99;
+                width: 0px!important;
+                padding: 30px!important;
+                height: 0px!important;
+                border-radius: 30px;
+            }
+            #fieldsToc ul, #toc ul  {
+                display: none;
+            }
+            #fieldsToc:hover, #toc:hover {
+                width: 50vw!important;
+                height: 100%!important;
+                border-radius: 0;
+            }
+            #fieldsToc:hover ul, #toc:hover ul {
+                display: block;
+            }
+
+        }
     }
-}

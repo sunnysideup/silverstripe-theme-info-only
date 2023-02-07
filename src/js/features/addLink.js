@@ -1,22 +1,22 @@
-const buttonTemplate =  '<button data-id="x" data-inputactive="false">+</button>'
+const buttonTemplate =  '<button data-id="ID_HERE" data-inputactive="false">+</button>'
 
 const sites = document.getElementsByClassName('site');
 for (var i = 0; i < sites.length; i++) {
     const site = sites[i];
-    
+
     // create html div
     const newElement = document.createElement('div');
-    newElement.innerHTML = buttonTemplate.replace('x',site.dataset.id)
-    
-    // find the appropriate place to add 
+    newElement.innerHTML = buttonTemplate.replace('ID_HERE',site.dataset.id)
+
+    // find the appropriate place to add
     site.children[0].before(newElement)
 
     // add listener
     site.children[0].children[0].addEventListener(
-        'click', 
+        'click',
         function() {addLinkClick(site);}
         )
-    
+
     //add styling classes
     site.children[0].children[0].classList.add('AddLinkButton');
     newElement.classList.add('AddLinkDiv')
@@ -68,7 +68,7 @@ function inputLink(site, link) {
     const formData = new FormData();
     formData.append("id", id);
     formData.append("link", link);
-    
+
     // make request
     const request = new XMLHttpRequest();
     request.open("POST", destination);
