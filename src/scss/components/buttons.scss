@@ -1,5 +1,15 @@
 button, .button {
-    background-color: transparent;
+    background: transparent;
+    border: none;
     border-radius: 3px;
+}
 
+button:hover span {
+    color: #2d57ff !important;
+    margin-top: -1px;
+}
+
+.addlinkdiv {
+    float: right;
+    margin-top: -1.5em;
 }
