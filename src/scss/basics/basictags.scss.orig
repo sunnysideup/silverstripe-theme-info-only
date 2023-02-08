@@ -18,7 +18,11 @@ main *[id] {
     scroll-margin-top: 10rem;
 }
 
-span.material-symbols-outlined {
+span.material-icons {
     vertical-align: bottom;
     font-size: 1.4em!important;
+<<<<<<< HEAD
+    color: #8ac926;
+=======
+>>>>>>> c2b394174b90f0ea1a78e705c51dd8c22c4b2c1b
 }
