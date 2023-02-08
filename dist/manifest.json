@@ -1,6 +1,6 @@
 {
-  "./app.js": "./app.js",
-  "./main.css": "./main.css",
-  "./runtime.js": "./runtime.js",
-  "./images/SSU_Logo_horizontal_.png": "./images/SSU_Logo_horizontal_.aa9ab930.png"
+  "dist/app.js": "./app.js",
+  "dist/main.css": "./main.css",
+  "dist/runtime.js": "./runtime.js",
+  "dist/images/SSU_Logo_horizontal_.png": "./images/SSU_Logo_horizontal_.aa9ab930.png"
 }
