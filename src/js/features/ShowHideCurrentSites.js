@@ -5,7 +5,7 @@ if(holder) {
         function() {
             const showCurrent = !holder.classList.contains('show-current');
             holder.classList.toggle('show-current');
-            var sites = document.getElementsByClassName('site');
+            const sites = document.getElementsByClassName('site');
             for (var i = 0; i < sites.length; i++) {
                 const site = sites[i];
                 if((showCurrent && site.classList.contains('current')) || !showCurrent) {

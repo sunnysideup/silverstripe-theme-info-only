@@ -1,4 +1,13 @@
 Body.SitesPage {
+    .screenshot {
+        display: block;
+        img {
+            border: 1px solid #aaa;
+            margin: 1rem 1rem 1rem 0;
+            display: block;
+            max-width: 400px;
+        }
+    }
     .typography .site * {
         font-size: 15px;
     }
