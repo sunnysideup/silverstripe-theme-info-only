@@ -4,7 +4,6 @@
  * It will look for all data-field and create a Fields Table of Contents
  *
  */
-
 const fieldsToc = document.getElementById('fieldsToc')
 if (fieldsToc) {
     const selectors = document.querySelectorAll('[data-field]')
