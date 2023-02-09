@@ -81,30 +81,54 @@ function updateSiteDOM(DOMtext, button) {
     console.log(additions);
 }
 
-//based on https://gist.github.com/joshblack/81b61f33fdb6233c50eb
 function getDOMAdditions(oldDOMCollection, newDOMCollection) {
     let additions = [];
 
     let oldI = 0;
-    for (i = 0; i < newDOMCollection.length; i++) {
-        if (oldDOMCollection[oldI] !== newDOMCollection[i]) {
-            //difference 
-            //does this still exist but elsewhere?
-            if (newDOMCollection.indexOf(oldDOMCollection[oldI]) !== -1) {
-                //if not, this node is entirely new!
+    for (var i = 0; i < newDOMCollection.length; i++) {
+        if (newDOMCollection[i].isEqualNode(oldDOMCollection[oldI])) {
+            //no changes made here
+            oldI++;
+        }
+        else {
+            //there is a change here, does the expected thing occur later?
+            if (doesHTMLCollectionContain(newDOMCollection, oldDOMCollection[oldI])) {
+                //there is an addition here, or something changed in a child here
+                //are they the same without children?
+                if (areElementsEqualWithoutChildren(oldDOMCollection[oldI], newDOMCollection[i])) {
+                    additions.push(getDOMAdditions(oldDOMCollection[oldI].children, newDOMCollection[i].children));
+                }
+                //if not, this is entirely new/changed
                 additions.push(newDOMCollection[i]);
-
-            } else {
-                //this means the node was deleted, check against the next
+            }
+            else {
+                //there is a deletion here
                 oldI++;
                 i--;
             }
         }
-        else {
-            //these align
-            oldI++;
-        }
     }
 
     return additions;
+}
+
+function doesHTMLCollectionContain(collection, element) {
+    for (let item of collection) {
+        if (item.isEqualNode(element)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function areElementsEqualWithoutChildren(element1, element2) {
+    const first = element1.cloneNode(true);
+    first.textContent = '';
+    const second = element2.cloneNode(true);
+    second.textContent = '';
+
+    console.log(first);
+    console.log(second);
+
+    return first.isEqualNode(second);
 }
