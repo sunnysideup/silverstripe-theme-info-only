@@ -1,4 +1,11 @@
 Body.SitesPage {
+    em {
+        font-style: normal;
+        color: #777;
+    }
+    ul li {
+        margin-bottom: 0;
+    }
     .active-links > ul, .active-links > ul > li ,
     .missing-links > ul, .missing-links > ul > li
     {
@@ -122,24 +129,61 @@ Body.SitesPage {
     }
 
     @media only screen and (max-width: 1330px)  {
-        #fieldsToc, #toc {
+        #fieldsToc {
+            right: 20px;
+        }
+        #fieldsToc.on {
+            right: 0px!important;
+        }
+        #toc {
+            right: 60px;
+            left: auto;
+        }
+        #toc.on {
+            right: auto;
+            left: 0!important;
+        }
+        .menu-holder {
             z-index: 99;
             width: 0px!important;
             padding: 30px!important;
             height: 0px!important;
             border-radius: 30px;
+            overflow: visible;
+            bottom: 0!important;
+            top: auto!important;
+            cursor: pointer;
         }
-        #fieldsToc ul, #toc ul  {
+        .menu-holder  >  * {
             display: none;
         }
-        #fieldsToc:hover, #toc:hover {
+        .menu-holder.on {
             width: 50vw!important;
             height: 100%!important;
             border-radius: 0;
+            top: 0!important;
         }
-        #fieldsToc:hover ul, #toc:hover ul {
+        .menu-holder.on > * {
             display: block;
         }
-
+        .menu-holder:hover {
+            bottom: 1px!important;
+        }
+        .menu-holder.on:hover {
+            bottom: 0px!important;
+        }
+        .menu-holder.on:after {
+            content: "\e5c9";
+            font-family: 'Material Symbols Outlined';
+            position: absolute;
+            right: 30px;
+            top: calc(100vh - 30px - 1em);
+            font-size: 2rem;
+            color: white;
+        }
+        #fieldsToc.on:after {
+            right: auto;
+            left: 30px;
+        }
     }
 }
