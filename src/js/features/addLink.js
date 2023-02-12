@@ -1,16 +1,18 @@
-const sites = document.getElementsByClassName('site');
-const buttons = document.getElementsByClassName('addlinkbutton');
+import {siteInit} from './initFeatures'
 
-//Adding event listeners
-for (var i = 0; i < buttons.length; i++) {
-    const button = buttons[i]
-    button.addEventListener(
-            'click',
-            function() {addLinkClick(button);}
-    )
+export function addLinkInit() {
+    const buttons = document.getElementsByClassName('addlinkbutton');
+    //Adding event listeners
+    for (var i = 0; i < buttons.length; i++) {
+        const button = buttons[i];
+        //clear existing listeners just in case (eg for partial resets)
+        button.removeEventListener('click', addLinkClick);
+        button.addEventListener('click', addLinkClick);
+    }
 }
 
-function addLinkClick(button) {
+function addLinkClick(event) {
+    const button = event.currentTarget;
     //so only one input is created
     if (button.dataset.inputactive == "false") {
         button.dataset.inputactive = "true";
@@ -63,48 +65,10 @@ function inputLink(button, link) {
         //after response
         if (request.readyState == 4 && request.status == 200) {
             const response = request.responseText;
-            updateSiteDOM(response, button);
+            const site = button.parentElement.parentElement;
+            site.outerHTML = response;
+            //re-init here!
+            siteInit();
         }
     };
-}
-
-function updateSiteDOM(DOMtext, button) {
-    const changedElem = document.createElement('div');
-    changedElem.innerHTML = DOMtext;
-    const changedDOM = changedElem.children[0].children;
-
-    const site = button.parentElement.parentElement;
-    const siteDOM = site.children;
-
-    let additions = getDOMAdditions(siteDOM, changedDOM);
-
-    console.log(additions);
-}
-
-//based on https://gist.github.com/joshblack/81b61f33fdb6233c50eb
-function getDOMAdditions(oldDOMCollection, newDOMCollection) {
-    let additions = [];
-
-    let oldI = 0;
-    for (i = 0; i < newDOMCollection.length; i++) {
-        if (oldDOMCollection[oldI] !== newDOMCollection[i]) {
-            //difference 
-            //does this still exist but elsewhere?
-            if (newDOMCollection.indexOf(oldDOMCollection[oldI]) !== -1) {
-                //if not, this node is entirely new!
-                additions.push(newDOMCollection[i]);
-
-            } else {
-                //this means the node was deleted, check against the next
-                oldI++;
-                i--;
-            }
-        }
-        else {
-            //these align
-            oldI++;
-        }
-    }
-
-    return additions;
 }
