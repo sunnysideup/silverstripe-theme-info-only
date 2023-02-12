@@ -72,9 +72,8 @@
         margin-bottom: 0;
         padding-left: 0;
         li {
-            line-height: 1.5;
             margin-left: 2.2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.1rem;
             padding-left: 0;
             h3,h4,h5,h6 {
                 margin: 0;
@@ -215,6 +214,11 @@
         font-weight: 200;
         font-style: italic;
         font-family: $base_font_condensed;
+    }
+
+    em {
+        font-style: normal;
+        color: #777;
     }
     blockquote p {
         text-align: right;

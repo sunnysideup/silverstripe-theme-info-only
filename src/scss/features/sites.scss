@@ -1,27 +1,37 @@
 Body.SitesPage {
-    em {
-        font-style: normal;
-        color: #777;
+
+    .site {
+        position: relative;
+        border-top: 1px solid #2d57ff;
+        &.show {
+            display: block!important;
+        }
+        &.hidden {
+            display: none!important;
+        }
     }
-    ul li {
-        margin-bottom: 0;
+    .screenshot img {
+        max-width: 100%;
+        display: block;
+        border: 1px solid #eee;
+        margin: 1rem 1rem 1rem 0;
     }
-    .active-links > ul, .active-links > ul > li ,
-    .missing-links > ul, .missing-links > ul > li
+    .addlinkdiv,
+    #add-site {
+        float: right;
+        margin-top: -1.5em;
+    }
+
+    .active-links > ul,
+    .active-links > ul > li ,
+    .missing-links > ul,
+    .missing-links > ul > li
     {
         padding-left: 0;
         margin-left: 0;
         list-style: none;
     }
-    .screenshot {
-        display: block;
-        img {
-            border: 1px solid #aaa;
-            margin: 1rem 1rem 1rem 0;
-            display: block;
-            max-width: 400px;
-        }
-    }
+
     .typography .site * {
         font-size: 15px;
     }
@@ -50,15 +60,7 @@ Body.SitesPage {
         font-size: 12px!important;
     }
 
-    .site {
-        border-top: 1px solid #2d57ff;
-        &.show {
-            display: block!important;
-        }
-        &.hidden {
-            display: none!important;
-        }
-    }
+
 
 
     .link-holder {
@@ -86,10 +88,7 @@ Body.SitesPage {
         padding: 0!important;
     }
 
-    #fieldsToc:hover, #toc:hover {
-        width: 200px;
-    }
-    #fieldsToc, #toc {
+    .menu-holder {
         background-color: #a59e8c;
         padding: 20px;
         position: fixed;
@@ -101,25 +100,26 @@ Body.SitesPage {
         overflow-y: auto;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 0 2.6px;
     }
-    #toc li a.current, #fieldsToc li a.current {
-        color: white;
-        font-weight: bold;
-    }
-    #toc li, #fieldsToc li {
+
+    .menu-holder li, .menu-holder p {
         font-size: 13px;
         list-style: none;
         margin: 0;
         padding: 0;
     }
-    #toc li a, #fieldsToc li a {
+    .menu-holder li a {
         padding-top: 3px;
         padding-bottom: 3px;
         display: block;
     }
-    #toc li a:hover, #fieldsToc li a:hover {
+    .menu-holder li a.current {
+        color: white;
+        font-weight: bold;
+    }
+    .menu-holder li a:hover {
         text-decoration: underline;
     }
-    #toc li a.current:hover, #fieldsToc li a.current:hover {
+    .menu-holder li a.current:hover {
         color: #fff;
     }
     #fieldsToc {
@@ -133,6 +133,7 @@ Body.SitesPage {
         left: 0;
         background-color: #ffbe0b;
     }
+
 
     @media only screen and (max-width: 1330px)  {
         #fieldsToc {
@@ -190,6 +191,23 @@ Body.SitesPage {
         #fieldsToc.on:after {
             right: auto;
             left: 30px;
+        }
+    }
+    @media only screen and (min-width: 1600px)  {
+        .screenshot {
+            position: absolute;
+            margin-left: -250px;
+            top: 0;
+            display: block;
+            z-index: 999;
+            img {
+                display: block;
+                max-width: 200px;
+            }
+            img:hover {
+                max-width: 100%;
+                left: 0;
+            }
         }
     }
 }
