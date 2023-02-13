@@ -16,10 +16,22 @@ Body.SitesPage {
         border: 1px solid #eee;
         margin: 1rem 1rem 1rem 0;
     }
-    .addlinkdiv,
-    #add-site {
+    .site-action{
+        display: block;
         float: right;
-        margin-top: -1.5em;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin: 0 7px;
+        padding: 3px;
+        background-color: #eee;
+        line-height: inherit;
+        width: 1.5em;
+        text-align: center;
+        color: #555;
+    }
+    .site-action:hover {
+        color: #2d57ff;
+        border-color: #2d57ff;
     }
 
     .active-links > ul,
