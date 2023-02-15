@@ -20,6 +20,7 @@ function addLinkClick(event) {
         inputElement.type = 'text';
         inputElement.classList.add('addlinkinput');
         inputElement.style.width = "250px"
+        inputElement.style.float = "right"
 
         inputElement.addEventListener("keyup", ({key}) => {
             if (key === "Enter") {

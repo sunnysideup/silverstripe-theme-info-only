@@ -44,19 +44,21 @@ Body.SitesPage {
         list-style: none;
     }
 
-    .typography .site * {
-        font-size: 15px;
+    .site * {
+        font-size: 1.5rem;
     }
 
     .error {
         color: #6e0101;
         text-decoration: line-through;
     }
-
-    [data-field] {
+    .site-sub-section {
         border-top: 1px solid #eee;
-        margin-top: 2rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        min-height: 3rem;        
     }
+
     .missing-links, .active-links {
         margin-top: 2rem;
     }
@@ -93,6 +95,11 @@ Body.SitesPage {
     }
     .link-items li {
         list-style: none;
+    }
+    
+    .link-items > li:not(:first-child){
+        margin-top: 2rem!important;
+        margin-bottom: 2rem!important;
     }
 
     .project-details {
@@ -146,6 +153,13 @@ Body.SitesPage {
         background-color: #ffbe0b;
     }
 
+    .site-title {
+        min-height: 4rem;
+    }
+    h3.site-title, h3.site-title * {
+        font-size: 2rem;
+    }
+
     .hour-graph {
         background-color: beige;
         display: flex;
@@ -163,7 +177,6 @@ Body.SitesPage {
             background-color: #8ac926;
         }
     }
-
     @media only screen and (max-width: 1330px)  {
         #fieldsToc {
             right: 20px;
