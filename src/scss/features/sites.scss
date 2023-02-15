@@ -146,6 +146,23 @@ Body.SitesPage {
         background-color: #ffbe0b;
     }
 
+    .hour-graph {
+        background-color: beige;
+        display: flex;
+        max-height: 2rem;
+        .current-hours,
+        .hours-left {
+            text-align: center;
+            overflow: hidden;
+        }
+        .current-hours {
+            background-color:#6e0101;
+            color: white;
+        }
+        .hours-left {
+            background-color: #8ac926;
+        }
+    }
 
     @media only screen and (max-width: 1330px)  {
         #fieldsToc {
