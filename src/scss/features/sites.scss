@@ -178,6 +178,11 @@ Body.SitesPage {
             background-color: #8ac926;
         }
     }
+    .password {
+        background-color: #eee;
+        padding: 3px;
+        display: inline-block;
+    }
     @media only screen and (max-width: 1330px)  {
         #fieldsToc {
             right: 20px;
