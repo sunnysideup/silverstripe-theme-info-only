@@ -4,10 +4,10 @@ Body.SitesPage {
         position: relative;
         border-top: 1px solid #2d57ff;
         &.show {
-            display: block;
+            display: block!important;
         }
         &.hidden {
-            display: none;
+            display: none!important;
         }
     }
     .screenshot img {
@@ -56,7 +56,7 @@ Body.SitesPage {
         border-top: 1px solid #eee;
         margin-top: 1rem;
         padding-top: 1rem;
-        min-height: 3rem;
+        min-height: 3rem;        
     }
 
     .missing-links, .active-links {
@@ -96,7 +96,7 @@ Body.SitesPage {
     .link-items li {
         list-style: none;
     }
-
+    
     .link-items > li:not(:first-child){
         margin-top: 2rem!important;
         margin-bottom: 2rem!important;
@@ -153,14 +153,7 @@ Body.SitesPage {
         background-color: #ffbe0b;
     }
 
-    .site-title {
-        margin-top: 4rem;
-        margin-bottom: 2rem;
-    }
-    h3.site-title, h3.site-title * {
-        font-size: 2rem;
-    }
-
+<<<<<<< HEAD
     .hour-graph {
         background-color: beige;
         display: flex;
@@ -177,7 +170,15 @@ Body.SitesPage {
         .hours-left {
             background-color: #8ac926;
         }
+=======
+    .site-title {
+        min-height: 4rem;
     }
+    h3.site-title, h3.site-title * {
+        font-size: 2rem;
+>>>>>>> 16f10c0dfc98516a81e39afb09ebc4c94e984659
+    }
+
     @media only screen and (max-width: 1330px)  {
         #fieldsToc {
             right: 20px;
