@@ -4,7 +4,8 @@ export function showHideCurrentSitesInit(onFirstInit) {
         holder.removeEventListener('click', holderEventHandler, true);
         holder.addEventListener('click', holderEventHandler, true);
     }
-    if (onFirstInit) {
+    if (onFirstInit && document.getElementsByClassName('current').length > 0) {
+        //automatically apply current filter if at least one site would be displayed
         holder.click();
     }
 }
@@ -17,9 +18,9 @@ function holderEventHandler(event) {
     for (var i = 0; i < sites.length; i++) {
         const site = sites[i];
         if((showCurrent && site.classList.contains('current')) || !showCurrent) {
-            site.style.display = 'block';
+            site.classList.remove("hide-not-current");
          } else {
-            site.style.display = 'none';
+            site.classList.add("hide-not-current");
         }
     }
 }

@@ -3,11 +3,14 @@ Body.SitesPage {
     .site {
         position: relative;
         border-top: 1px solid #2d57ff;
+        &.hide-not-current {
+            display: none;
+        }
         &.show {
-            display: block;
+            display: block!important;
         }
         &.hidden {
-            display: none;
+            display: none!important;
         }
     }
     .screenshot img {
@@ -69,6 +72,10 @@ Body.SitesPage {
 
     .missing-links ul {
         column-count: 3;
+        margin-left: 242px!important;
+    }
+    .missing-links strong {
+        float: left;
     }
     .missing-links ul li {
         font-size: 12px!important;
@@ -251,10 +258,12 @@ Body.SitesPage {
             img {
                 display: block;
                 max-width: 200px;
+                opacity: 0.2;
             }
             img:hover {
                 max-width: 100%;
                 left: 0;
+                opacity: 1;
             }
         }
     }
