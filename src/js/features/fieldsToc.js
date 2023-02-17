@@ -78,10 +78,33 @@ function filterIterate(arrayOfSelectors, currentSelection) {
         const value = div.getAttribute('data-field').trim()
         const empty = currentSelection.length === 0
         const posInCurrent = currentSelection.indexOf(value)
-        if (empty || posInCurrent !== -1) {
+        //catch for missing link section
+        if (div.classList.contains('missing-links')) {
+            //is this section actually missing?
+            setMissingLinksDisplay(div, empty, currentSelection)
+        } else if (empty || posInCurrent !== -1) {
             div.style.display = ''
         } else {
             div.style.display = 'none'
         }
     })
+}
+
+function setMissingLinksDisplay(div, empty, currentSelection) {
+    //any links that don't have display: none?
+    let shouldDisplay = false;
+    const missingLinks = div.querySelectorAll('li');
+    for (var i = 0; i < missingLinks.length; i++) {
+        const value = missingLinks[i].getAttribute('data-field').trim()
+        if (currentSelection.indexOf(value) !== -1) {
+            shouldDisplay = true;
+        }
+    }
+    if (shouldDisplay || empty) {
+        div.style.display = ''
+    }
+    else {
+        div.style.display = 'none'
+    }
+    //else, hide
 }
