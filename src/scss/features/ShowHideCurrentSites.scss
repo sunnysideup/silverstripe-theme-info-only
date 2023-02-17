@@ -1,20 +1,30 @@
 #ShowHideCurrent {
-    border-bottom: 1px solid #ffffff77;
     padding-bottom: 1rem;
-    margin-bottom: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
     &.show-current {
         #ShowHideCurrentShowCurrent {
-            display: none;
+            display: block;
+            color: white;
+            font-weight: bold;
         }
         #ShowHideCurrentShowAll {
             display: block;
         }
     }
-    #ShowHideCurrentShowAll {
-        display: none;
-    }
-    #ShowHideCurrentShowCurrent {
-        display: block;
+    &.show-all {
+        #ShowHideCurrentShowAll {
+            display: block;
+            color: white;
+            font-weight: bold;
+        }
+        #ShowHideCurrentShowCurrent {
+            display: block;
+        }
     }
 }
 
+#ShowHideCurrent a:hover {
+    text-decoration: underline;
+}

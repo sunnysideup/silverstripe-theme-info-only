@@ -109,9 +109,24 @@ Body.SitesPage {
         margin-bottom: 2rem!important;
     }
 
+    .inner-link ul {
+        padding-inline-start: 0px;
+    }
+
     .project-details {
         margin: 0!important;
         padding: 0!important;
+    }
+
+    .list-details {
+        padding: 0!important;
+        margin: 0!important;
+        margin-left: 242px!important;
+        padding-inline-start: 0px;
+    }
+    .list-details li {
+        list-style: none;
+        margin-left: 0px;
     }
 
     .menu-holder {

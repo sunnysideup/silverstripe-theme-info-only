@@ -1,4 +1,9 @@
 #stats-list li.stat-li {
     display: flex;
     justify-content: space-between;
+    font-weight: bold;
+}
+
+li.stat-li span {
+    font-weight: normal;
 }

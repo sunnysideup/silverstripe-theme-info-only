@@ -1,5 +1,6 @@
 export function showHideCurrentSitesInit(onFirstInit) {
     const holder = document.getElementById('ShowHideCurrent');
+    holder.classList.toggle('show-all');
     if(holder) {
         holder.removeEventListener('click', holderEventHandler, true);
         holder.addEventListener('click', holderEventHandler, true);
@@ -14,6 +15,7 @@ function holderEventHandler(event) {
     const holder = event.currentTarget;
     const showCurrent = !holder.classList.contains('show-current');
     holder.classList.toggle('show-current');
+    holder.classList.toggle('show-all');
     const sites = document.getElementsByClassName('site');
     for (var i = 0; i < sites.length; i++) {
         const site = sites[i];
