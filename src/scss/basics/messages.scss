@@ -2,9 +2,6 @@ $colour_bad: red;
 $colour_good: green;
 
 .message {
-    font-size: 2rem!important;
-    line-height: 1;
-    margin-bottom: 0.5rem;
     font-weight: 600;
     background-color: $colour_sunny_side_up_yellow;
     display: block;
@@ -13,8 +10,10 @@ $colour_good: green;
     color: $colour_black_lighter;
     a {
         display: inline-block;
-        color: $colour_white;
         padding: 0 3px;
+    }
+    * {
+        color: $colour_white;
     }
 }
 > p.message {
@@ -24,26 +23,15 @@ $colour_good: green;
     position: relative;
     left: 50%;
 }
-.message strong {
-    font-size: 2rem!important;
-    line-height: 1;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: $colour_black_lighter;
-}
 
-span.message {
-    margin-top: 0;
-    font-weight: 900px;
-}
 .field + span.message {
     margin-top: -0.8rem;
 }
-span.message.bad {
+.message.bad {
     background-color: $colour_bad;
     color: $colour_white;
 }
-span.message.good {
+.message.good {
     background-color: $colour_good;
     color: $colour_white;
 }

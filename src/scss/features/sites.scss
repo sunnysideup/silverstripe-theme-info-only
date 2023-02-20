@@ -13,6 +13,14 @@ Body.SitesPage {
             display: none!important;
         }
     }
+    h4 {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        padding-right: 20px;
+        line-height: 1.35;
+    }
+
     .screenshot img {
         max-width: 100%;
         display: block;
@@ -55,12 +63,6 @@ Body.SitesPage {
         color: #6e0101;
         text-decoration: line-through;
     }
-    .site-sub-section {
-        border-top: 1px solid #eee;
-        margin-top: 1rem;
-        padding-top: 1rem;
-        min-height: 3rem;
-    }
 
     .missing-links, .active-links {
         margin-top: 2rem;
@@ -72,7 +74,6 @@ Body.SitesPage {
 
     .missing-links ul {
         column-count: 3;
-        margin-left: 242px!important;
     }
     .missing-links strong {
         float: left;
@@ -80,9 +81,6 @@ Body.SitesPage {
     .missing-links ul li {
         font-size: 12px!important;
     }
-
-
-
 
     .link-holder {
         position: relative;
@@ -98,10 +96,11 @@ Body.SitesPage {
     .link-items {
         padding: 0!important;
         margin: 0!important;
-        margin-left: 242px!important;
     }
     .link-items li {
         list-style: none;
+        padding-left: 0;
+        margin-left: 0;
     }
 
     .link-items > li:not(:first-child){
@@ -121,7 +120,6 @@ Body.SitesPage {
     .list-details {
         padding: 0!important;
         margin: 0!important;
-        margin-left: 242px!important;
         padding-inline-start: 0px;
     }
     .list-details li {
@@ -231,8 +229,8 @@ Body.SitesPage {
             top: auto!important;
             cursor: pointer;
         }
-        .menu-holder  >  * {
-            display: none;
+        .menu-holder:not(.on)  >  * {
+            display: none!important;
         }
         .menu-holder.on {
             width: 50vw!important;
@@ -241,7 +239,7 @@ Body.SitesPage {
             top: 0!important;
         }
         .menu-holder.on > * {
-            display: block;
+            visibility: visible!important;
         }
         .menu-holder:hover {
             bottom: 1px!important;
@@ -258,9 +256,22 @@ Body.SitesPage {
             font-size: 2rem;
             color: white;
         }
-        #fieldsToc.on:after {
-            right: auto;
-            left: 30px;
+    }
+    @media only screen and (min-width: 600px)  {
+        .site-sub-section {
+            border-top: 1px solid #eee;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            min-height: 3rem;
+            display: flex;
+            .left-col {
+                width: 220px;
+            }
+            .right-col {
+                width: calc(100% - 300px);
+                flex-grow: 1;
+            }
+
         }
     }
     @media only screen and (min-width: 1600px)  {
