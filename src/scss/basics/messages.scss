@@ -16,17 +16,7 @@ $colour_good: green;
         color: $colour_white;
     }
 }
-.field p.message {
-    margin-bottom: -3.5rem!important;
-    width: calc(50% - 2rem);
-    z-index: 9;
-    position: relative;
-    left: 50%;
-}
 
-.field + span.message {
-    margin-top: -0.8rem;
-}
 .message.bad {
     background-color: $colour_bad;
     color: $colour_white;
