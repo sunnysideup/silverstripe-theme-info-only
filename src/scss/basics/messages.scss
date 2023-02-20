@@ -16,7 +16,7 @@ $colour_good: green;
         color: $colour_white;
     }
 }
-> p.message {
+.field p.message {
     margin-bottom: -3.5rem!important;
     width: calc(50% - 2rem);
     z-index: 9;
