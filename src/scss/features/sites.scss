@@ -282,7 +282,7 @@ Body.SitesPage {
             z-index: 999;
             img {
                 display: block;
-                max-width: 200px;
+                max-width: 50px;
                 border: 2px solid #2d57ff;
                 margin: 2rem auto 0rem 0;
                 border-radius: 4px;
@@ -293,6 +293,9 @@ Body.SitesPage {
                 left: 0;
                 //opacity: 1;
             }
+        }
+        h3  {
+            margin-top: 1rem!important;
         }
     }
 }
