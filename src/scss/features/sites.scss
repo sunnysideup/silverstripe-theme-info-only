@@ -105,11 +105,12 @@ Body.SitesPage {
         list-style: none;
         padding-left: 0;
         margin-left: 0;
+        padding-bottom: 1rem;
     }
 
     .link-items > li:not(:first-child){
-        margin-top: 2rem!important;
-        margin-bottom: 2rem!important;
+        padding-top: 1rem;
+        border-top: 1px solid #eee;
     }
 
     .inner-link ul {
@@ -194,6 +195,9 @@ Body.SitesPage {
         .current-hours {
             background-color:#6e0101;
             color: white;
+            span {
+                color: white;
+            }
         }
         .hours-left {
             background-color: #8ac926;
