@@ -1,0 +1,3 @@
+@import 'PROJECT_ROOT/_resources/vendor/silverstripe/admin/client/dist/styles/bundle.css'
+@import 'PROJECT_ROOT/_resources/vendor/silverstripe/login-forms/client/dist/styles/bundle.css'
+@import 'PROJECT_ROOT/_resources/vendor/silverstripe/login-forms/client/dist/styles/darkmode.css'
