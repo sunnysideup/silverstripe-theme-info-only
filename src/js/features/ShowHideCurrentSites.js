@@ -1,13 +1,15 @@
 export function showHideCurrentSitesInit(onFirstInit) {
     const holder = document.getElementById('ShowHideCurrent');
-    holder.classList.toggle('show-all');
     if(holder) {
         holder.removeEventListener('click', holderEventHandler, true);
         holder.addEventListener('click', holderEventHandler, true);
     }
-    if (onFirstInit && document.getElementsByClassName('current').length > 0) {
+    if (onFirstInit) {
+        holder.classList.toggle('show-all');
         //automatically apply current filter if at least one site would be displayed
-        holder.click();
+        if (document.getElementsByClassName('current').length > 0) {
+            holder.click();
+        }
     }
 }
 

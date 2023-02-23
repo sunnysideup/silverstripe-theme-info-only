@@ -39,6 +39,7 @@ function calculateStats() {
 }
 
 function displayStats() {
+    console.log(calcStats);
     document.getElementById("stats-total-sites").innerHTML = calcStats.totalSites;
     document.getElementById("stats-current-sites").innerHTML = calcStats.sitesWithCurrentProject;
     document.getElementById("stats-inactive-sites").innerHTML = calcStats.totalSites-calcStats.sitesWithCurrentProject;

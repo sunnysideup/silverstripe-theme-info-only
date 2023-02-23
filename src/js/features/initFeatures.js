@@ -2,6 +2,7 @@ import {addLinkInit} from './addLink';
 import {showHideCurrentSitesInit} from './ShowHideCurrentSites';
 import {fieldsTocInit} from './fieldsToc';
 import { updateValuesInit } from './updateValues';
+import { refreshStats } from './stats';
 
 let currentFieldsFilters = [];
 
@@ -12,4 +13,5 @@ export function siteInit(firstInit=false) {
     showHideCurrentSitesInit(firstInit);
     fieldsTocInit(firstInit, currentFieldsFilters);
     updateValuesInit();
+    refreshStats();
 }

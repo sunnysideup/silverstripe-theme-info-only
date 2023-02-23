@@ -78,14 +78,19 @@ function filterIterate(arrayOfSelectors, currentSelection) {
         const value = div.getAttribute('data-field').trim()
         const empty = currentSelection.length === 0
         const posInCurrent = currentSelection.indexOf(value)
-        //catch for missing link section
-        if (div.classList.contains('missing-links')) {
+        if (empty || posInCurrent !== -1) {
+            div.style.display = ''
+        } else if (div.classList.contains('missing-links')) {
             //is this section actually missing?
             setMissingLinksDisplay(div, empty, currentSelection)
-        } else if (empty || posInCurrent !== -1) {
-            div.style.display = ''
         } else {
-            div.style.display = 'none'
+            //catch for missing links sections
+            if (div.classList.contains('error') && currentSelection.indexOf('Missing') !== -1) {
+                div.style.display = '';
+            }
+            else {
+                div.style.display = 'none';
+            }
         }
     })
 }
