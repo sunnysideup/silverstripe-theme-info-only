@@ -16,6 +16,8 @@ const source = document.getElementById('find-box');
 
 const inputHandler = function(e) {
     const value = e.target.value
+    const currentFilter = document.getElementById('ShowHideCurrent');
+    const hr = document.getElementById('SearchFilterHR');
     var sites = document.getElementsByClassName("site");
     let prefixMatches = [];
     let substringMatches = [];
@@ -25,13 +27,19 @@ const inputHandler = function(e) {
         const id = site.id
         const res = id.substring(5).indexOf(value);
         if (! value) {
+            currentFilter.style.display = '';
+            hr.style.display = '';
             site.classList.remove('show')
             site.classList.remove('hidden')
         } else if(res === 0) {
             //console.log(value + '=' + id + '- show' )
+            currentFilter.style.display = 'none';
+            hr.style.display = 'none';
             prefixMatches.push(site)
         } else {
             //console.log(value + '=' + id + '- hide' )
+            currentFilter.style.display = 'none';
+            hr.style.display = 'none';
             site.classList.remove('show')
             site.classList.add('hidden')
             if(res != -1) {

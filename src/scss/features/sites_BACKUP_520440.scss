@@ -182,6 +182,29 @@ Body.SitesPage {
         margin-bottom: 2rem;
     }
 
+<<<<<<< HEAD
+=======
+    .hour-graph {
+        background-color: beige;
+        display: flex;
+        max-height: 2rem;
+        .current-hours,
+        .hours-left {
+            text-align: center;
+            overflow: hidden;
+        }
+        .current-hours {
+            background-color:#6e0101;
+            color: white;
+            span {
+                color: white;
+            }
+        }
+        .hours-left {
+            background-color: #8ac926;
+        }
+    }
+>>>>>>> 8ffe6f9d8e5ff204dfa0352870c9c1c0d1e28156
     .password {
         background-color: #eee;
         padding: 3px;
