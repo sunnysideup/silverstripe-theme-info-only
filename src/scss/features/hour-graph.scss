@@ -1,0 +1,27 @@
+
+.hour-graph {
+    background-color: beige;
+    display: flex;
+    max-height: 3rem;
+    border-radius: 5px;
+
+    .current-hours,
+    .hours-left {
+        border-radius: 5px;
+        padding: 0.5rem;
+        text-align: center;
+        overflow: hidden;
+        font-size: 13px!important;
+        min-width: 3rem;
+    }
+    .current-hours {
+        background-color:#2D57FF;
+        color: white;
+        border-radius: 5px 0 0px 5px;
+    }
+    .hours-left {
+        background-color: #8ac926;
+        border-radius:  0 5px 5px 0;
+
+    }
+}

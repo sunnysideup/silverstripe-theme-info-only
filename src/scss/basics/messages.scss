@@ -1,13 +1,15 @@
-$colour_bad: red;
-$colour_good: green;
+$colour_bad: #923d7a;
+$colour_good: #8ac926;
 
 .message {
     font-weight: 600;
     background-color: $colour_sunny_side_up_yellow;
     display: block;
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
     color: $colour_black_lighter;
+    font-size: 13px!important;
+    border-radius: 5px;
     a {
         display: inline-block;
         padding: 0 3px;
@@ -24,4 +26,8 @@ $colour_good: green;
 .message.good {
     background-color: $colour_good;
     color: $colour_white;
+}
+
+div.message {
+    margin: 1rem 0;
 }
