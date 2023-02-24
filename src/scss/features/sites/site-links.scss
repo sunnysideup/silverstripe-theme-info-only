@@ -1,0 +1,65 @@
+Body.SitesPage {
+
+    .active-links > ul,
+    .active-links > ul > li ,
+    .missing-links > ul,
+    .missing-links > ul > li
+    {
+        padding-left: 0;
+        margin-left: 0;
+        list-style: none;
+    }
+
+    .missing-links, .active-links {
+        margin-top: 2rem;
+    }
+    .missing-links [data-field] {
+        border-top: none;
+        margin-top: 0;
+    }
+
+    .missing-links ul {
+        column-count: 3;
+    }
+    .missing-links strong {
+        float: left;
+    }
+    .missing-links ul li a {
+        font-size: 12px!important;
+    }
+
+    .link-holder {
+        position: relative;
+        padding-bottom: 1rem;
+        padding-bottom: 0!important;
+        margin-bottom: 0!important;
+        padding-top: 1rem;
+    }
+    .link-holder > strong {
+        float: left;
+        display: block;
+    }
+    .link-items {
+        padding: 0!important;
+        margin: 0!important;
+    }
+    .link-items li {
+        list-style: none;
+        padding-left: 0;
+        margin-left: 0;
+        padding-bottom: 2rem;
+    }
+
+    .link-items > li:not(:first-child){
+        padding-top: 1rem;
+        border-top: 1px solid #eee;
+    }
+
+    .inner-link ul {
+        padding-inline-start: 0px;
+    }
+
+    .inner-link li {
+        padding-bottom: 0;
+    }
+}
