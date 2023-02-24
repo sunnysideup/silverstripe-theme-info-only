@@ -38,7 +38,7 @@ Body.SitesPage {
         margin: 0 7px;
         padding: 3px;
         background-color: #eee;
-        line-height: inherit;
+        line-height: 1.5em;
         width: 1.5em;
         text-align: center;
         color: #555;
@@ -104,7 +104,7 @@ Body.SitesPage {
         list-style: none;
         padding-left: 0;
         margin-left: 0;
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
     }
 
     .link-items > li:not(:first-child){
@@ -114,6 +114,10 @@ Body.SitesPage {
 
     .inner-link ul {
         padding-inline-start: 0px;
+    }
+
+    .inner-link li {
+        padding-bottom: 0;
     }
 
     .project-details {
@@ -306,6 +310,9 @@ Body.SitesPage {
             }
             clear: both;
 
+        }
+        .client {
+            align-items: flex-start;
         }
     }
 }
