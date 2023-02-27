@@ -1,0 +1,77 @@
+Body.SitesPage {
+    @media only screen and (max-width: 1330px)  {
+        #fieldsToc {
+            right: 20px;
+        }
+        #fieldsToc.on {
+            right: 0px!important;
+        }
+        #toc {
+            right: 60px;
+            left: auto;
+        }
+        #toc.on {
+            right: auto;
+            left: 0!important;
+        }
+        .menu-holder {
+            z-index: 99;
+            width: 0px!important;
+            padding: 30px!important;
+            height: 0px!important;
+            border-radius: 30px;
+            overflow: visible;
+            bottom: 0!important;
+            top: auto!important;
+            cursor: pointer;
+        }
+        .menu-holder:not(.on)  >  * {
+            display: none!important;
+        }
+        .menu-holder.on {
+            width: 50vw!important;
+            height: 100%!important;
+            border-radius: 0;
+            top: 0!important;
+        }
+        .menu-holder.on > * {
+            visibility: visible!important;
+        }
+        .menu-holder:hover {
+            bottom: 1px!important;
+        }
+        .menu-holder.on:hover {
+            bottom: 0px!important;
+        }
+        .menu-holder.on:after {
+            content: "\e5c9";
+            font-family: 'Material Symbols Outlined';
+            position: absolute;
+            right: 30px;
+            top: calc(100vh - 30px - 1em);
+            font-size: 2rem;
+            color: white;
+        }
+    }
+    @media only screen and (min-width: 600px)  {
+        .site-sub-section {
+            border-top: 1px solid #eee;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            min-height: 3rem;
+            display: flex;
+            .left-col {
+                background-color: #eee;
+                width: 200px;
+                padding: 1rem;
+                margin-right: 1rem;
+            }
+            .right-col {
+                width: calc(100% - 300px);
+                flex-grow: 1;
+            }
+            clear: both;
+
+        }
+    }
+}

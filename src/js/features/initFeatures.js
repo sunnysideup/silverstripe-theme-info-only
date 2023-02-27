@@ -3,6 +3,7 @@ import {showHideCurrentSitesInit} from './ShowHideCurrentSites';
 import {fieldsTocInit} from './fieldsToc';
 import { updateValuesInit } from './updateValues';
 import { refreshStats } from './stats';
+import { addSiteInit } from './addSite';
 
 let currentFieldsFilters = [];
 
@@ -13,5 +14,6 @@ export function siteInit(firstInit=false) {
     showHideCurrentSitesInit(firstInit);
     fieldsTocInit(firstInit, currentFieldsFilters);
     updateValuesInit();
+    addSiteInit();
     refreshStats();
 }

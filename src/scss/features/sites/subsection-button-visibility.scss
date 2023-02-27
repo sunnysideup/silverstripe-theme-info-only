@@ -1,0 +1,25 @@
+Body.SitesPage {
+    .site-sub-section {
+        .site-action {
+            opacity: 0.0;
+            transition: all 0.3s;
+            transition-delay: 150ms;
+        }
+        .add-link-holder {
+            transition: all 0.3s;
+            transition-delay: 150ms;
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        &:hover {
+            .site-action {
+                opacity: 1;
+            }
+            .add-link-holder {
+                height: 4rem;
+            }
+    
+        }
+    }
+}
