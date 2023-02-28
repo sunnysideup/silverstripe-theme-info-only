@@ -230,6 +230,18 @@
         -webkit-text-stroke-color: inherit;
     }
 
+
+    a:not(.site-action) {
+        text-decoration: underline dotted;
+        text-decoration-thickness: from-font;
+        text-decoration-color: rgba(68, 68, 68, 0.5);
+    }
+
+    a:hover:not(.site-action) {
+        text-decoration: underline;
+        text-decoration-color: currentColor;
+    }
+
     .last-updated {
         font-weight: 200;
         color: $colour_yep_thats_grey;
