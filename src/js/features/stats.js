@@ -29,11 +29,11 @@ function calculateStats() {
     for (var i = 0; i < window.stats.projects.length; i++) {
         const project = window.stats.projects[i];
         calcStats.totalProjects++;
-        calcStats.projectHoursLeft += project.HoursLeft;
-        calcStats.projectDaysLeft = Math.round(calcStats.projectHoursLeft/5);
-        calcStats.completeDate = new Date(new Date().getTime()+(calcStats.projectDaysLeft*24*60*60*1000));
         if (project.isActive) {
             calcStats.activeProjects++;
+            calcStats.projectHoursLeft += project.HoursLeft;
+            calcStats.projectDaysLeft = Math.round(calcStats.projectHoursLeft/5);
+            calcStats.completeDate = new Date(new Date().getTime()+(calcStats.projectDaysLeft*24*60*60*1000));
         }
     }
 }

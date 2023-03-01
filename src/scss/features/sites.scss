@@ -29,14 +29,16 @@ Body.SitesPage {
         font-family: "Titillium Web", sans-serif;
         font-weight: 200;
     }
-
+    .tiny-url {
+        font-size: 1rem!important;
+    }
     .site-action{
         display: block;
         float: right;
         border: 1px solid #ccc;
         border-radius: 3px;
         margin: 0 7px;
-        padding: 3px;
+        padding: 0px;
         background-color: #eee;
         line-height: 1.5em;
         width: 1.5em;
@@ -70,6 +72,9 @@ Body.SitesPage {
     .list-details li {
         list-style: none;
         margin-left: 0px;
+        &:has(.site-action) + li:has(.site-action) {
+            margin-top: 1rem;
+        }
     }
 
     .site-title {
