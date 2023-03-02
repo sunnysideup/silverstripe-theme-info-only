@@ -19,6 +19,9 @@ export function fieldsTocInit(onFirstInit, currentSelection) {
             // console.log(value)
         })
 
+        //alphabetical order
+        items.sort();
+
         const ulEl = document.createElement('ul')
         ulEl.id = 'filterUl'
 
