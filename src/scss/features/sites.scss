@@ -117,7 +117,41 @@ Body.SitesPage {
     .menu-holder,
     .site-action,
     .missing-links,
-    .not-entered {
-        display: none!important;
+    .not-entered,
+    .add-link-holder {
+        //display: none!important;
+        opacity: 0!important;
+        height: 0!important;
+        margin-top: 0!important;
+        overflow: hidden!important;
+    }
+
+    .site-sub-section, .list-details {
+        margin-bottom: 0!important;
+        padding-bottom: 0!important;
+        margin-top: 0!important;
+        padding-top: 0!important;
+    }
+
+    .left-col {
+        margin-top: 0!important;
+        margin-bottom: 0.1rem!important;
+    }
+
+    a, span {
+        text-decoration: none!important;
+        font-size: 1rem!important;
+    }
+    a[href]:after {
+        content: none !important;
+    }
+
+    body, li, li strong, li em, li div {
+        font-size: 1rem!important;
+        margin-top: 0!important;
+    }
+
+    .site-title-inner {
+        font-size: 2rem!important;
     }
 }

@@ -27,4 +27,12 @@
         border-radius:  0 5px 5px 0;
 
     }
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: currentColor;
+        .current-hours {
+            text-decoration-color: white;
+        }
+    }
 }
