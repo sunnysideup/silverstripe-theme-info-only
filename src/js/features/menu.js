@@ -1,3 +1,5 @@
+import { getURLParam, setURLParam } from "./urlParameters";
+
 window.onload = function() {
     const menuItems = document.getElementsByClassName('menu-holder');
     for(var i = 0; i < menuItems.length; i++) {
@@ -10,12 +12,22 @@ window.onload = function() {
             this.classList.toggle('on')
         }
     }
+    const urlSearch = getURLParam('s');
+    if (urlSearch !== null) {
+        performSearch(urlSearch);
+        source.value = urlSearch;
+    }
 }
 
 const source = document.getElementById('find-box');
 
 const inputHandler = function(e) {
     const value = e.target.value.toLowerCase();
+    performSearch(value);
+    setURLParam("s", value);
+}
+
+function performSearch(value) {
     const currentFilter = document.getElementById('ShowHideCurrent');
     const hr = document.getElementById('SearchFilterHR');
     var sites = document.getElementsByClassName("site");

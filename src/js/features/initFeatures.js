@@ -4,6 +4,7 @@ import {fieldsTocInit} from './fieldsToc';
 import { updateValuesInit } from './updateValues';
 import { refreshStats } from './stats';
 import { addSiteInit } from './addSite';
+import { keyClickCopyInit } from './keyClickCopy';
 
 let currentFieldsFilters = [];
 
@@ -15,5 +16,6 @@ export function siteInit(firstInit=false) {
     fieldsTocInit(firstInit, currentFieldsFilters);
     updateValuesInit();
     addSiteInit();
+    keyClickCopyInit();
     refreshStats();
 }

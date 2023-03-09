@@ -6,6 +6,10 @@
 
 Body.SitesPage {
 
+    #main {
+        border-radius: 5px;
+    }
+
     .site {
         position: relative;
         border-top: 1px solid #2d57ff;
@@ -109,6 +113,21 @@ Body.SitesPage {
         padding: 1rem;
         margin-bottom: 1rem;
         margin-top: 2rem;
+    }
+
+    .site-sub-section[data-field="Main"] {
+        ul li {
+            min-height: 3rem;
+            &.add-link-holder {
+                min-height: 0;
+            }
+        }
+    }
+
+    .set-max-width {
+        max-width: 40rem;
+        display: inline-block;
+        word-break: break-all;
     }
 }
 

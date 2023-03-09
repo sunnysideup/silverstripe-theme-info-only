@@ -59,4 +59,10 @@ Body.SitesPage {
     .inner-link li {
         padding-bottom: 0;
     }
+
+    [data-field="Project Management  - Current "] {
+        .left-col {
+            background-color: #e1c96b;
+        }
+    }
 }
