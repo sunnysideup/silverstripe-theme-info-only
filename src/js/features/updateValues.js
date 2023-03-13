@@ -35,8 +35,8 @@ function addEditing(event) {
         // destination
         const proto = window.location.protocol;
         const hostname = window.location.hostname;
-        const pm = field.parentElement.parentElement.parentElement.parentElement
-        const pmID = pm.dataset.id;
+        const pm = field.parentElement.parentElement.parentElement.parentElement;
+        const pmID = field.dataset.id;
         const uri = "/our-sites/updateprojecthours/"+pmID+"/"; //project UUID 
         const destination = proto+"//"+hostname+uri
 
