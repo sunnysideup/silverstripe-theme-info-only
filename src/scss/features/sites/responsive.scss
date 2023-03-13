@@ -1,0 +1,25 @@
+Body.SitesPage {
+
+    @media only screen and (min-width: 600px)  {
+        .site-sub-section {
+            border-top: 1px solid #eee;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            min-height: 3rem;
+            display: flex;
+            .left-col {
+                width: 200px;
+                margin-right: 1rem;
+                margin-bottom: 0rem;
+                margin-top: 0rem;
+
+            }
+            .right-col {
+                width: calc(100% - 300px);
+                flex-grow: 1;
+            }
+            clear: both;
+
+        }
+    }
+}
