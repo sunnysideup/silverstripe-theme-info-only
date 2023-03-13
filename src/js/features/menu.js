@@ -25,6 +25,10 @@ const inputHandler = function(e) {
     const value = e.target.value.toLowerCase();
     performSearch(value);
     setURLParam("s", value);
+    window.scrollTo( {
+        top: 1,
+        behavior: 'smooth'
+    });
 }
 
 function performSearch(value) {
